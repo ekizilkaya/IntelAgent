@@ -1,4 +1,4 @@
-# IntelAgent: A Privacy-Centric Autonomous Agent for Researchers and Journalists
+# IntelAgent: A Privacy-First AI Framework for Journalists and Researchers
 
 IntelAgent is a locally executed, privacy-first artificial intelligence assistant engineered for complex, multi-step tasks. Designed specifically for investigative journalists and scientific researchers, the architecture prioritizes data sovereignty and operational security. To support professionals in critical environments, the application features an interface available in English, as well as the native languages of two fragile democracies where journalists and researchers face immense pressure: Turkey and Hungary. By utilizing local large language models (LLMs) and open-weights alternatives, the system mitigates the privacy risks associated with proprietary, cloud-based application programming interfaces (APIs). Furthermore, this app democratizes access to programming; the user can use various Python functions by simply chatting with the bot.
 
