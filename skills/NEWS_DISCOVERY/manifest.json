@@ -1,0 +1,16 @@
+{
+  "id": "NEWS_DISCOVERY",
+  "name": "News Discovery",
+  "icon": "🌍",
+  "description": "A skill designed for news discovery, extracting the tops news stories from pro-government, independent and international RSS feeds focusing on Turkey, Hungary, and Global news.",
+  "version": "1.0",
+  "entrypoint": "instructions.md",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/NEWS_DISCOVERY/news_discovery_mcp.py"
+      ]
+    }
+  ]
+}

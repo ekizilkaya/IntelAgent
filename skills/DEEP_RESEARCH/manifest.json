@@ -1,0 +1,21 @@
+{
+  "id": "DEEP_RESEARCH",
+  "name": "Derinlemesine Araştırma",
+  "icon": "🔬",
+  "routing_description": "For highly detailed, comprehensive, multi-step research tasks that require autonomous planning, multiple internet and academic searches, reasoning, and extensive, high-quality report generation.",
+  "mcp_servers": [
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "pass_env": true
+    },
+    {
+      "command": "{sys.executable}",
+      "args": ["skills/ACADEMIC_SEARCHER/academic_searcher_mcp.py"]
+    },
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "{WORKSPACE_DIR}", "{DOWNLOADS_DIR}", "{PROJECTS_DIR}"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+data analysis agent specializing in Pandas dataset inspections, statistical queries, and generating Seaborn visualizations

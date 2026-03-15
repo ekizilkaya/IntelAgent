@@ -1,0 +1,17 @@
+{
+  "id": "GITHUB_MANAGER",
+  "name": "GitHub Yöneticisi",
+  "icon": "🐙",
+  "routing_description": "For autonomously managing GitHub pull requests, organizing issues, reviewing code, and executing continuous integration workflows. Uses the official Github MCP server.",
+  "mcp_servers": [
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "pass_env": true
+    },
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "{WORKSPACE_DIR}", "{DOWNLOADS_DIR}", "{PROJECTS_DIR}"]
+    }
+  ]
+}

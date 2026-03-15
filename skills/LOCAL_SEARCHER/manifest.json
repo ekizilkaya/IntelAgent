@@ -1,0 +1,18 @@
+{
+  "id": "LOCAL_SEARCHER",
+  "name": "Yerel Dosya",
+  "icon": "📂",
+  "routing_description": "For creating, reading, writing, or searching local files on the filesystem.",
+  "mcp_servers": [
+    {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{WORKSPACE_DIR}",
+        "{DOWNLOADS_DIR}",
+        "{PROJECTS_DIR}"
+      ]
+    }
+  ]
+}

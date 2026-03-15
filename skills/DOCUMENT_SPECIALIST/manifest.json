@@ -1,0 +1,16 @@
+{
+  "id": "DOCUMENT_SPECIALIST",
+  "name": "Belge Uzmanı",
+  "icon": "📄",
+  "routing_description": "Triggers when the user asks to read, edit, or summarize a file uploaded to the workspace or sandbox, or when asking for Local files, Word, Excel (.xlsx, .csv), PowerPoint (.docx, .pptx), or local PDF ops. Use this to summarize an uploaded data file (CSV, Excel) in the workspace. Use the Google Workspace Manager agent ONLY when the user explicitly uses the words 'Google' or 'Cloud'.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": ["skills/DOCUMENT_SPECIALIST/document_mcp.py"]
+    },
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "{WORKSPACE_DIR}", "{DOWNLOADS_DIR}", "{PROJECTS_DIR}"]
+    }
+  ]
+}

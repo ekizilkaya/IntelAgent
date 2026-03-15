@@ -1,0 +1,14 @@
+{
+  "id": "FOI_REQUEST_WRITER",
+  "name": "Bilgi Edinme Başvurusu (FoI)",
+  "icon": "⚖️",
+  "routing_description": "Gazeteciler için Türkiye'deki kurumlara yönelik yasal dayanaklı, detaylı ve olası 4982 ret gerekçelerini önceden çürüten Bilgi Edinme (CİMER/Kurumsal) başvuruları yazar.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/FOI_REQUEST_WRITER/foi_request_mcp.py"
+      ]
+    }
+  ]
+}

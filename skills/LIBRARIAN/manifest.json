@@ -1,0 +1,14 @@
+{
+  "id": "LIBRARIAN",
+  "name": "Kütüphaneci",
+  "icon": "📚",
+  "routing_description": "ONLY use for answering questions using Retrieval-Augmented Generation (RAG) based on the user's local reference documents (PDFs, TXT files) uploaded specifically to the agent_references folder. Do NOT use this to summarize newly uploaded files in the workspace/sandbox.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/LIBRARIAN/librarian_mcp.py"
+      ]
+    }
+  ]
+}

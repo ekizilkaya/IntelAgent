@@ -1,0 +1,12 @@
+{
+  "id": "GOOGLE_WORKSPACE",
+  "name": "Google Workspace Yöneticisi",
+  "icon": "☁️",
+  "routing_description": "For tasks explicitly involving Google services or Cloud (Google Docs, Google Sheets, Google Drive, and Google Calendar). Handles reading/writing docs, checking schedules, managing spreadsheets, and drive files.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": ["skills/GOOGLE_WORKSPACE/google_workspace_mcp.py"]
+    }
+  ]
+}

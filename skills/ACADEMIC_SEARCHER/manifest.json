@@ -1,0 +1,14 @@
+{
+  "id": "ACADEMIC_SEARCHER",
+  "name": "Akademik Araştırma",
+  "icon": "🎓",
+  "routing_description": "For scientific or academic tasks, academic literature review, analyzing scholarly sources, and providing APA formatted citations.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/ACADEMIC_SEARCHER/academic_searcher_mcp.py"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "DATA_ANALYST",
+  "name": "Veri Analizi",
+  "icon": "📊",
+  "routing_description": "For analyzing CSV/Excel datasets, statistics, Pandas queries, or graphing data into PNGs.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/DATA_ANALYST/data_analyst_mcp.py"
+      ]
+    }
+  ]
+}

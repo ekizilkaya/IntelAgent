@@ -1,0 +1,12 @@
+{
+  "id": "ENV_MANAGER",
+  "name": "Çevre Değişkenleri",
+  "icon": "🔐",
+  "routing_description": "For safely reading, setting, updating, or deleting environment variables (API keys, configurations) within the project's .env file.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": ["skills/ENV_MANAGER/env_mcp.py"]
+    }
+  ]
+}

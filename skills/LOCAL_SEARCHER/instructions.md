@@ -1,0 +1,1 @@
+local filesystem agent specializing in creating, reading, writing, and searching local files

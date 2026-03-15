@@ -1,0 +1,20 @@
+﻿{
+  "id": "ADVANCED_WEB_SCRAPER",
+  "name": "Gelişmiş Web Kazıyıcı",
+  "icon": "🕸️",
+  "routing_description": "ONLY for explicitly visiting a specific URL to take screenshots, scrape dynamic HTML elements, interact with a page visually, or extract and clean structured datasets formatted as JSON or CSV files.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": ["skills/ADVANCED_WEB_SCRAPER/scraper_mcp.py"]
+    },
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "{WORKSPACE_DIR}", "{DOWNLOADS_DIR}", "{PROJECTS_DIR}"]
+    }
+  ]
+}

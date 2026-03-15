@@ -1,0 +1,14 @@
+{
+  "id": "NEWSROOM_EDITOR",
+  "name": "Haber ve İçerik Editörü",
+  "icon": "📰",
+  "routing_description": "Gazetecilerin haber metinlerini geliştirmek, tashih (proofreading) ve haber merkezi stil rehberine göre redaksiyon (copyediting) yapmak için kullanılır.",
+  "mcp_servers": [
+    {
+      "command": "{sys.executable}",
+      "args": [
+        "skills/NEWSROOM_EDITOR/newsroom_editor_mcp.py"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+﻿{
+  "id": "WEB_SEARCHER",
+  "name": "Web Araştırma",
+  "icon": "🌐",
+  "routing_description": "For internet searches, factual queries, weather forecasts, or news WITHOUT a specific URL. If the user provides a specific URL to visit, scrape, or screenshot, DO NOT use this; use ADVANCED_WEB_SCRAPER instead.",
+  "mcp_servers": [
+    {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "pass_env": true
+    },
+    {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{WORKSPACE_DIR}",
+        "{DOWNLOADS_DIR}",
+        "{PROJECTS_DIR}"
+      ]
+    }
+  ]
+}

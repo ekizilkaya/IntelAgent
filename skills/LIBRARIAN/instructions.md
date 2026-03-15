@@ -1,0 +1,1 @@
+librarian agent using Retrieval-Augmented Generation (RAG) to search local reference documents (PDFs, TXT) and synthesize answers.

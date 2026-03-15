@@ -1,0 +1,29 @@
+﻿# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Agent state & local databases
+agent_memory/
+agent_workspace/
+agent_references/
+
+# Sensitive files & Environment variables
+.env
+skills/*/token.json
+skills/**/token.json
+skills/*/credentials.json
+skills/**/credentials.json
+token.json
+credentials.json
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# OS generated files
+.DS_Store
+Thumbs.db
