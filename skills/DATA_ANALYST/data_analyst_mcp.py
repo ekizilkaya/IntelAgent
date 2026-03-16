@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import uuid
 import pandas as pd
@@ -49,7 +50,7 @@ def inspect_dataset(file_path: str) -> str:
 def execute_sandboxed_script(code: str) -> str:
     """
     Saves the provided Python code string to a temporary .py file and runs it.
-    Returns stdout on success, and stderr on error. Enforces a 60 second timeout.
+    Returns stdout on success, and stderr on error. Enforces a 300-second (5-minute) timeout.
     """
     try:
         sandbox_dir = os.path.join(WORKSPACE_DIR, "sandbox")
@@ -71,7 +72,7 @@ def execute_sandboxed_script(code: str) -> str:
 
         result = subprocess.run(
             [sys.executable, filepath],
-            timeout=60,
+            timeout=300,
             capture_output=True,
             text=True,
             stdin=subprocess.DEVNULL,
@@ -88,13 +89,34 @@ def execute_sandboxed_script(code: str) -> str:
             
         return output_str
     except subprocess.TimeoutExpired as e:
-        err_msg = "TimeoutError: Script execution exceeded 60 seconds."
+        err_msg = "TimeoutError: Script execution exceeded 300 seconds (5 minutes)."
         with open(os.path.join(sandbox_dir, "last_tool_output.log"), "w", encoding="utf-8") as f:
             f.write(err_msg)
         return err_msg
     except Exception as e:
         import traceback
         return f"Error executing sandboxed script:\n{traceback.format_exc()}"
+
+@mcp.tool()
+def install_python_package(package_name: str) -> str:
+    """
+    Installs a Python package in the current environment using pip.
+    Use this if a script requires a library that is not currently installed.
+    """
+    try:
+        import sys
+        result = subprocess.run(
+            [sys.executable, "-m", "pip", "install", package_name],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode == 0:
+            return f"Successfully installed {package_name}:\n{result.stdout}"
+        else:
+            return f"Failed to install {package_name}. Error:\n{result.stderr}\n{result.stdout}"
+    except Exception as e:
+        import traceback
+        return f"Error installing package:\n{traceback.format_exc()}"
 
 if __name__ == "__main__":
     # Ensure dependencies are installed (pandas, seaborn, openpyxl, etc.)

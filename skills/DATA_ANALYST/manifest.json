@@ -2,7 +2,7 @@
   "id": "DATA_ANALYST",
   "name": "Veri Analizi",
   "icon": "📊",
-  "routing_description": "For analyzing CSV/Excel datasets, statistics, Pandas queries, or graphing data into PNGs.",
+  "routing_description": "For analyzing CSV/Excel datasets, statistics, Pandas queries, interactive HTML visuals, or graphing data into PNGs. ALWAYS use this agent for local file paths, including synced folders like G:\\My Drive\\... or C:\\Users\\...",
   "mcp_servers": [
     {
       "command": "{sys.executable}",

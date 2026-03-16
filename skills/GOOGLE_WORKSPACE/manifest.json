@@ -2,7 +2,7 @@
   "id": "GOOGLE_WORKSPACE",
   "name": "Google Workspace Yöneticisi",
   "icon": "☁️",
-  "routing_description": "For tasks explicitly involving Google services or Cloud (Google Docs, Google Sheets, Google Drive, and Google Calendar). Handles reading/writing docs, checking schedules, managing spreadsheets, and drive files.",
+  "routing_description": "For tasks explicitly involving Google services or Cloud APIs (Google Docs, Google Sheets, Google Drive, Google Calendar). Do NOT use this for reading local CSV/Excel files, even if they are in 'G:\\My Drive\\...'. For local CSV/Excel analysis, route to DATA_ANALYST.",
   "mcp_servers": [
     {
       "command": "{sys.executable}",
